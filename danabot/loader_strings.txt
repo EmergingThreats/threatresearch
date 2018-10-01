@@ -1,0 +1,40 @@
+HARDWARE\DESCRIPTION\System\
+CentralProcessor\0\Identifier
+HARDWARE\DESCRIPTION\System\
+CentralProcessor\0\ProcessorNameString
+HARDWARE\DESCRIPTION\System\
+VideoBiosVersion
+HARDWARE\DESCRIPTION\System\
+Identifier
+HARDWARE\DESCRIPTION\System\
+SystemBiosDate
+SOFTWARE\Microsoft\Windows NT\CurrentVersion\
+ProductId
+SOFTWARE\Microsoft\Windows NT\CurrentVersion\
+InstallDate
+EXPLORER.EXE
+urlmon.dll
+wininet.dll
+advapi32.dll
+wininet.dll
+urlmon.dll
+shell32.dll
+kernel32.dll
+kernel32.dll
+advapi32.dll
+ntdll.dll
+crypt32.dll
+shell32.dll
+ws2_32.dll
+\rundll32.exe
+Software\Microsoft\Windows\CurrentVersion\Internet Settings\
+ProxyEnable
+32.dll
+64.dll
+WSASend
+send
+https://
+f1
+f1
+f1
+f1
