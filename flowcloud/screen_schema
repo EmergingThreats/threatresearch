@@ -1,0 +1,36 @@
+CREATE TABLE file(
+  id INTEGER primary key autoincrement,
+  insert_time TEXT,
+  encoded_path TEXT,
+  encoded_size INTEGER,
+  transfered_size INTEGER,
+  status INTEGER,
+  path TEXT,
+  name TEXT,
+  subpath TEXT,
+  attribute INTEGER,
+  size INTEGER,
+  create_time INTEGER,
+  last_access_time INTEGER,
+  last_write_time INTEGER
+);
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE file_data(
+  id INTEGER primary key autoincrement,
+  file_id INTEGER,
+  ofs INTEGER,
+  data BLOB,
+  status INTEGER,
+  foreign key(file_id) references file(id) on delete cascade
+);
+CREATE INDEX idx_file_id on file_data(file_id);
+CREATE TABLE table_filed_space(
+  table_name TEXT,
+  filed TEXT,
+  size INTEGER,
+  unique(table_name, filed)
+);
+CREATE TRIGGER file_after_delete after delete on file begin delete from file_data where file_data.file_id = old.id;end;
+CREATE TRIGGER file_data_after_insert after insert on file_data begin update table_filed_space set size=size+length(new.data) where table_name='file_data' and filed='data';end;
+CREATE TRIGGER file_data_after_delete after delete on file_data begin update table_filed_space set size=size-length(old.data) where table_name='file_data' and filed='data';end;
+CREATE TRIGGER file_data_after_update after update on file_data begin update table_filed_space set size=size-length(old.data)+length(new.data) where table_name='file_data' and filed='data';end;
