@@ -11,4 +11,4 @@ DNS over UDP port 53 payloads when revision 13 of the rules were released on 202
 rules designed to inspect DNS over TCP payloads at the correct offsets. As a part of lessons learned, Emerging Threat QA
 processes are being revised to prevent a repeat of this problem in the future.
 
-Full details can be found within the [detailed writeup.]((2022-07-19/README.md))
+Full details can be found within the [detailed writeup.](2022-07-19/README.md)
