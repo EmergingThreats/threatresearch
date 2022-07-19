@@ -182,7 +182,7 @@ Newer releases of Suricata 5.x or higher include a dns keyword
 called [`dns.opcode`](https://suricata.readthedocs.io/en/suricata-5.0.0/rules/dns-keywords.html#dns-opcode). As the name
 of the keyword implies, it lets rule writers create rules using DNS opcodes as a criteria. The natural question would be
 to ask why we aren’t using this rule option for these particular rules. During our analysis of the false positives
-reported on rules 2014702 and 2014703, we discovered [a bug](https://redmine.openinfosecfoundation.org/issues/5444)
+reported on rules 2014702 and 2014703, we discovered [a ~~bug~~ design choice](https://redmine.openinfosecfoundation.org/issues/5444)
 introduced in a [recent commit](https://github.com/OISF/suricata/commit/bf0813d9f07c30cf3f8541c10561ffd6f17ef0bf) of
 Suricata, current Suricata releases any DNS traffic that has an opcode greater than or equal to 7 doesn’t even register
 as DNS traffic. Not to mention, through testing it has been determined that the `dns.opcode` keyword only supports an
