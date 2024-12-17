@@ -72,7 +72,7 @@ rule APT_IN_TA397_wmRAT
           $str13 = "%.1f" ascii
           $str14 = "%02d-%02d-%d %02d:%02d" ascii
     condition:
-          uint32be(0x0) == 0x4d5a and
+          uint16be(0x0) == 0x4d5a and
           (2 of ($code*) or 10 of ($str*))
 
 }
@@ -86,7 +86,7 @@ rule rar_ntfs_ads {
         hash2 = "53a653aae9678075276bdb8ccf5eaff947f9121f73b8dcf24858c0447922d0b1"
     strings:
         // RAR file format documentation: https://www.rarlab.com/technote.htm
-        $rar_magic = {52 61 72 21} // RAR magic bytes (will match on any RAR version, we don't restrict on v5 for now, but on offset 0 which doesn not have to be the case according to the documentation)
+        $rar_magic = {52 61 72 21} // RAR magic bytes (will match on any RAR version, we don't restrict on v5 for now, but on offset 0 which does not have to be the case according to the documentation)
         $ads = {
                  03         // Header Type -> Service Header
                  23         // Header flags
