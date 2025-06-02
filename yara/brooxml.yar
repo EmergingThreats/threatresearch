@@ -15,7 +15,6 @@ rule brooxml_hunting {
 
         // Negations for FPs / unwanted file types
         $ole = {d0 cf 11 e0}
-        $mz = {4d 5a}
         $tef = {78 9f 3e 22}
     condition:
         $pk_ooxml_magic in (4..16384) and
@@ -29,7 +28,7 @@ rule brooxml_hunting {
         not ($pk_0506 at 0) and
         not ($pk_0708 at 0) and
         not ($ole at 0) and
-        not ($mz at 0) and
+        not (uint16(0) == 0x5a4d) and
         not ($tef at 0)
 }
 
