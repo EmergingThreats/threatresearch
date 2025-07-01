@@ -195,3 +195,26 @@ rule TA829_DustyHammock_Components_Memory
     condition:
         all of them
 }
+
+rule TransferLoader_API_Sequences
+{
+    meta:
+        author = "Proofpoint"
+        description = "Detects TransferLoader V2 executables."
+        date = "2025-06-13"
+        version = "0.1"
+        category = "malware"
+        malfamily = "TransferLoader"
+        reference = "21a262cab858944181d01b1bdeba51c8f4dab8e4f064a12c614eb89c294d94c5"
+        reference = "33971df8f5c34c3c79f64e2e28e300260499285bd37f77295ba88897728ace4b"
+
+  strings:
+        $instr_sequence_1 = { 48 C1 ?? ?? 49 ?? 00 00 00 00 00 00 55 } // Hexadecimal sequence for resolve TransferLoader API constant 55000000000000h
+        $instr_sequence_2 = { 48 ?? 00 00 00 00 00 CC }                // Hex sequence for api resolve 0CC0000000000h | mov     rcx, 0CC0000000000h
+        $instr_sequence_3 = { 48 ?? 00 00 00 00 33 00 }                // Hex sequence for resolve api | mov     rdi, 3300000000h
+        $instr_sequence_4 = { 48 ?? 00 00 00 00 00 00 00 AA}           // Hex sequence for resolve api |mov     rcx, 0AA00000000000000h
+        $xor_sequence_1 = { 45 8D 41 ?? 33 C9 45 3B C8 73 ?? 49 8B 42}
+        $xor_sequence_2 = { 48 D3 E8 83 C1 08 41 32 }
+  condition:
+        uint16(0) == 0x5a4d and 5 of them and filesize < 5MB
+}
