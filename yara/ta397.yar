@@ -90,7 +90,7 @@ rule rar_ntfs_ads {
         $ads = {
                  03         // Header Type -> Service Header
                  23         // Header flags
-                 [17-20]    // Flags and extra data area
+                 [15-20]    // Flags and extra data area
                  00         // Windows
                  03         // Length of name = STM = 3
                  53 54 4d   // STM NTFS alternate data stream
