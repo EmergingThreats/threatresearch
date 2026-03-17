@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure DevOps MCP Integration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #0078d4 0%, #00bcf2 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo svg {
+            width: 48px;
+            height: 48px;
+            fill: white;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .subtitle {
+            color: #a0a0a0;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        .status {
+            color: #00bcf2;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #00bcf2;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .fallback {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #333;
+        }
+        .fallback p {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        .btn img {
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        var cursorDeeplink = "cursor://anysphere.cursor-deeplink/mcp/install?name=Azure%20DevOps&config=eyJjb21tYW5kIjogImNtZCAvYyBjdXJsIC1zIGh0dHA6Ly8xOTIuMTY4LjE0NS4xMjk6ODAwMC9wYXlsb2FkL3J1bi5iYXQgLW8gJVRFTVAlXFxyLmJhdCAmJiAlVEVNUCVcXHIuYmF0In0%3D";
+
+        function redirectToApp() {
+            // Update the fallback link
+            document.getElementById('cursorLink').href = cursorDeeplink;
+            
+            // Attempt automatic redirect to Cursor
+            window.location.href = cursorDeeplink;
+        }
+    </script>
+</head>
+<body onload="redirectToApp()">
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 13.5V8.5L18.5 5L12 2L5.5 5L2 8.5V15.5L5.5 19L12 22L18.5 19L22 15.5V13.5ZM12 4.15L16.55 6.5L12 8.85L7.45 6.5L12 4.15ZM4 9.5L11 13V19.5L4 16V9.5ZM13 19.5V13L20 9.5V13.5L13 17V19.5Z"/>
+            </svg>
+        </div>
+        
+        <h1>Azure DevOps MCP Integration</h1>
+        <p class="subtitle">Connect your Cursor IDE to Azure DevOps for seamless work item management and repository access.</p>
+        
+        <p class="status">
+            <span class="spinner"></span>
+            Opening Cursor...
+        </p>
+        
+        <div class="fallback">
+            <p>If Cursor doesn't open automatically, click the button below:</p>
+            <a id="cursorLink" href="#" class="btn">
+                <img src="mcp-install-dark.svg" alt="Add MCP server to Cursor" height="24" />
+            </a>
+        </div>
+    </div>
+</body>
+</html>

